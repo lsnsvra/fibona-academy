@@ -42,18 +42,17 @@ const testimonials = [
 ]
 
 const contactInfoStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  flexWrap: 'wrap',
-  gap: '24px',
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(145px, 1fr))',
+  gap: '24px 16px',
   marginTop: '36px',
 }
 
 const contactItemStyle = {
   display: 'flex',
-  alignItems: 'center',
-  gap: '14px',
+  alignItems: 'flex-start',
+  gap: '10px',
+  minWidth: 0,
   textDecoration: 'none',
   color: 'inherit',
 }
@@ -61,12 +60,15 @@ const contactItemStyle = {
 const contactIconStyle = {
   color: '#9c7d41',
   flexShrink: 0,
+  marginTop: '2px',
 }
 
 const contactTextStyle = {
   display: 'flex',
   flexDirection: 'column',
   gap: '3px',
+  minWidth: 0,
+  overflowWrap: 'anywhere',
 }
 
 function Logo({ inverse = false }) {
@@ -193,7 +195,7 @@ function App() {
           </div>
           <div style={contactItemStyle}>
             <Monitor size={22} style={contactIconStyle} />
-            <span style={contactTextStyle}><b>Metode pembelajaran</b><small>Online dan offline</small></span>
+            <span style={contactTextStyle}><b>Metode pembelajaran</b><small>Online dan offline sesuai ketersediaan program</small></span>
           </div>
           <a href={wa} target="_blank" rel="noreferrer" style={contactItemStyle}>
             <MessageCircle size={22} style={contactIconStyle} />
